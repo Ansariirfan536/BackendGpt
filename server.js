@@ -28,6 +28,12 @@ const connectDB = async () => {
   }
 }
 
+app.get("/test",async(req ,res)=>{
+  res.json({
+    msg:"test was successfull"
+  })
+})
+
 app.use(async (req, res, next) => {
   await connectDB();
   next();
